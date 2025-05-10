@@ -4,7 +4,7 @@ class ParentNode(HTMLNode):
     def __init__(self, tag, children, props = None):
         super().__init__(tag, children = children, props=props)
 
-    def to_html_recur(self):
+    def to_html(self):
         if self.tag == None:
             raise ValueError("Parent node needs a tag")
 
@@ -17,7 +17,7 @@ class ParentNode(HTMLNode):
         text = f"<{self.tag}>"
         for child in self.children:
             if child.children != None:
-                text += child.to_html_recur()
+                text += child.to_html()
             else:
                 text += f"<{child.tag}>{child.value}</{child.tag}>"
 
