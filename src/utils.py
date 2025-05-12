@@ -148,7 +148,7 @@ def markdown_to_html_node(markdown):
                     list_nodes.append(HTMLNode("li", "", text_to_children(line[2:])))
                 html_nodes.append(HTMLNode("ul", "", list_nodes))
             case BlockType.QUOTE:
-                quote_node = HTMLNode("blockquote", "", text_to_children(block[1:]))
+                quote_node = HTMLNode("blockquote", "", text_to_children(block[1:].lstrip()))
                 html_nodes.append(quote_node)
             case BlockType.HEADING:
                 count = find_ashtags(block)

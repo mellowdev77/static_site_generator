@@ -21,7 +21,7 @@ class HTMLNode():
         if self.props != None:
             return_string = " "
             for k,v in self.props.items():
-                return_string += f"{k}='{v}' "
+                return_string += f"{k}='{v}'"
 
         return return_string.rstrip()
 
