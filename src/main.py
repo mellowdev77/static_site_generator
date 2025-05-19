@@ -4,9 +4,10 @@ import shutil
 import sys
 
 def main():
-    basepath = sys.argv[1]
-    if basepath == None:
-        basepath = "/"
+    basepath = "/"
+
+    if len(sys.argv) > 1 and sys.argv[1] != None:
+        basepath = sys.argv[1]
 
     gen_folder = "docs"
     if os.path.exists(gen_folder):
