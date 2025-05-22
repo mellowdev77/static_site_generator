@@ -9,7 +9,7 @@ class TestHTMLNode(unittest.TestCase):
             "href": "https://www.google.com",
             "target": "_blank",
         }
-        output_expected = " href='https://www.google.com' target='_blank'"
+        output_expected = " href='https://www.google.com'target='_blank'"
         self.assertEqual(output.props_to_html(), output_expected)
 
 if __name__ == "__main__":
